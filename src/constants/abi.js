@@ -1,0 +1,17 @@
+export const erc1155Abi = [
+  "constructor()",
+  "event ApprovalForAll(address indexed,address indexed,bool)",
+  "function safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)",
+  "function safeTransferFrom(address,address,uint256,uint256,bytes)",
+  "function setApprovalForAll(address,bool)",
+  "event TransferBatch(address indexed,address indexed,address indexed,uint256[],uint256[])",
+  "event TransferSingle(address indexed,address indexed,address indexed,uint256,uint256)",
+  "event URI(string,uint256 indexed)",
+  "function balanceOf(address,uint256) view returns (uint256)",
+  "function balanceOfBatch(address[],uint256[]) view returns (uint256[])",
+  "function GoldBadge() view returns (uint256)",
+  "function isApprovedForAll(address,address) view returns (bool)",
+  "function Points() view returns (uint256)",
+  "function supportsInterface(bytes4) view returns (bool)",
+  "function uri(uint256) pure returns (string)",
+];

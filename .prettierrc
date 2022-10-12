@@ -1,0 +1,6 @@
+{
+  "trailingComma": "all",
+  "importOrder": ["^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

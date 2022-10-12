@@ -1,0 +1,56 @@
+{
+  "name": "workshop-playground",
+  "packageManager": "yarn@3.2.3",
+  "engines": {
+    "node": "16.16.0"
+  },
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint src/**/*.{js,jsx} --fix",
+    "dev-a": "APP_ID=a vite",
+    "dev-b": "APP_ID=b vite",
+    "build-a": "APP_ID=a vite build",
+    "build-b": "APP_ID=b vite build",
+    "preview-a": "APP_ID=a vite preview",
+    "preview-b": "APP_ID=b vite preview",
+    "dev": "yarn dev-a & yarn dev-b && fg",
+    "postinstall": "husky install"
+  },
+  "resolutions": {
+    "ethereumjs-abi": "0.6.8"
+  },
+  "dependencies": {
+    "@coinbase/wallet-sdk": "3.5.3",
+    "@emotion/react": "11.10.4",
+    "@mantine/core": "5.5.1",
+    "@mantine/hooks": "5.5.1",
+    "@tabler/icons": "1.101.0",
+    "ethers": "5.7.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-helmet": "6.1.0"
+  },
+  "devDependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "0.1.1",
+    "@trivago/prettier-plugin-sort-imports": "3.3.0",
+    "@vitejs/plugin-react": "2.1.0",
+    "eslint": "8.25.0",
+    "eslint-config-eslint": "7.0.0",
+    "eslint-config-google": "0.14.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-react": "7.31.10",
+    "husky": "8.0.1",
+    "lint-staged": "13.0.3",
+    "prettier": "2.7.1",
+    "rollup-plugin-polyfill-node": "0.10.2",
+    "vite": "3.1.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  }
+}
